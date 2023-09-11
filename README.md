@@ -1,39 +1,47 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+# dot_bottom_nav_bar
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+A flutter package that provides awesome bottom navigation bar with dot indicator.
+## Installation
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
+1. Add the latest version of package to your pubspec.yaml (and run`dart pub get`):
+```yaml
+dependencies:
+  dot_bottom_nav_bar: ^0.0.1
+```
+2. Import the package and use it in your Flutter App.
 ```dart
-const like = 'sample';
+import 'package:dot_bottom_nav_bar/view/dot_bottom_nav_bar.dart';
 ```
 
-## Additional information
+## Example
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+<img src="https://www.uplooder.net/img/image/17/604ab15b5e5d1b8da69027005ead2cb0/Dot-Bottom-Nav-Bar.png" width="300" height="600"></img>
+
+```dart@
+Scaffold(
+      appBar: AppBar(toolbarHeight: 0),
+      body: const Center(child: Text("Dot Bottom Nav Bar")),
+      bottomNavigationBar: DotBottomNavBar(
+          currentIndex: selectIndex,
+          onTap: (value) {
+            setState(() {
+              selectIndex = value;
+            });
+          },
+          items: [
+            BottomNavItem(
+                emptySvg: "assets/ic_empty_home.svg",
+                fillSvg: "assets/ic_fill_home.svg",
+                label: "Home"),
+            BottomNavItem(
+                emptySvg: "assets/ic_empty_home.svg",
+                fillSvg: "assets/ic_fill_home.svg",
+                label: "Explore"),
+            BottomNavItem(
+                emptySvg: "assets/ic_empty_home.svg",
+                fillSvg: "assets/ic_fill_home.svg",
+                label: "Setting"),
+          ]),
+    );
+```

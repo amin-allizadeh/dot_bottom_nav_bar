@@ -35,9 +35,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const Text("Dot Bottom Nav Bar")),
+      appBar: AppBar(toolbarHeight: 0),
+      body: const Center(child: Text("Dot Bottom Nav Bar")),
       bottomNavigationBar: DotBottomNavBar(
           currentIndex: selectIndex,
           onTap: (value) {
