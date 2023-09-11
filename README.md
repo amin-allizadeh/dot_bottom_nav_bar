@@ -7,7 +7,7 @@ A flutter package that provides awesome bottom navigation bar with dot indicator
 1. Add the latest version of package to your pubspec.yaml ( and run an implicit `flutter pub get` ):
 ```yaml
 dependencies:
-  dot_bottom_nav_bar: ^0.0.1
+  dot_bottom_nav_bar: ^0.0.2
 ```
 2. Import the package and use it in your Flutter App.
 ```dart
